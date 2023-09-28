@@ -1,0 +1,14 @@
+.kasa-nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 70px 100px 30px 100px;
+}
+.kasa-nav .kasa-nav-liens a {
+  color: #ff6060;
+  text-decoration: none;
+  margin-left: 70px;
+  font-size: larger;
+}
+.kasa-nav .kasa-nav-liens a:hover {
+  text-decoration: underline;
+}/*# sourceMappingURL=Nav.css.map */

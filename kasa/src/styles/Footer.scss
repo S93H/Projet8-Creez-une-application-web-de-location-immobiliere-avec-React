@@ -1,0 +1,18 @@
+.footer {
+    background-color: black;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+
+    & img {
+        padding-top: 40px;
+    }
+
+    & p {
+        margin: 0;
+        padding: 20px;
+    }
+
+}

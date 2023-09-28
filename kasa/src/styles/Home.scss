@@ -1,0 +1,58 @@
+.Bannière {
+    position: relative;
+    margin: 70px 100px 50px 100px;
+    height: 220px;
+    color: white;
+    font-size: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        border-radius: 20px;
+        background-image: url(../assets/IMG.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        filter: brightness(.8);
+        z-index: -1;
+    }
+}
+
+.Cards_container {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #f6f6f6;
+    margin: 70px 100px 50px 100px;
+    border-radius: 20px;
+    height: auto;
+
+    .card {
+        // background-image: linear-gradient(to top, #813131, #9f3c3d, #be4848, #de5555, #ff6161);
+        background-image: linear-gradient(to top, #a24747, #b94d4e, #d05454, #e75a5b, #ff6161);
+        color: white;
+        border-radius: 10px;
+        height: 300px;
+        width: 25%;
+        margin: 50px;
+        display: flex;
+        align-items: flex-end;
+
+
+        & h2 {
+            width: 150px;
+            padding: 20px;
+            margin: 0;
+            font-weight: normal;
+            font-size: larger;
+
+        }
+    }
+}
