@@ -7,9 +7,11 @@
     display: flex;
     align-items: center;
     justify-content: center;
+   
+}
 
-
-    &::before {
+.homeBanner {
+     &::before {
         content: "";
         position: absolute;
         top: 0;
@@ -28,20 +30,33 @@
 
 .Cards_container {
     display: flex;
+    align-items: center;
+    justify-content: center;
     flex-wrap: wrap;
     background-color: #f6f6f6;
     margin: 70px 100px 50px 100px;
     border-radius: 20px;
     height: auto;
 
+    .card-link {
+        text-decoration: none;
+        width: 25%;
+        margin: 0 40px;
+        display: inline-block;
+        height: 100%;
+        vertical-align: top;
+    }
+
     .card {
-        // background-image: linear-gradient(to top, #813131, #9f3c3d, #be4848, #de5555, #ff6161);
-        background-image: linear-gradient(to top, #a24747, #b94d4e, #d05454, #e75a5b, #ff6161);
+        cursor: pointer;
+        // background-image: linear-gradient(to top, #a24747, #b94d4e, #d05454, #e75a5b, #ff6161);
+        background-repeat: no-repeat;
+        background-size: cover;
         color: white;
         border-radius: 10px;
-        height: 300px;
-        width: 25%;
-        margin: 50px;
+        height: 400px;
+        width: 100%;
+        margin: 50px 0 50px 0;
         display: flex;
         align-items: flex-end;
 

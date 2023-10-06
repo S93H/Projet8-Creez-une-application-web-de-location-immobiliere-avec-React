@@ -1,11 +1,10 @@
-import Bannière from '../assets/IMG.png';
+import React from 'react';
 import '../styles/Home.css';
 
-function Banner() {
+function Banner({backgroundImage, className}) {
     return(
-        <div className='Bannière'>
-            <p>Chez vous, partout et ailleurs</p>
-            {/* stooooooop */}
+        <div className= {`Bannière ${className}`}>
+            {backgroundImage && <p>Chez vous, partout et ailleurs</p>}
         </div>
     )
 }

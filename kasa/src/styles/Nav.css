@@ -9,6 +9,6 @@
   margin-left: 70px;
   font-size: larger;
 }
-.kasa-nav .kasa-nav-liens a:hover {
+.kasa-nav .kasa-nav-liens a.active {
   text-decoration: underline;
 }/*# sourceMappingURL=Nav.css.map */

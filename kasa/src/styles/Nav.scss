@@ -11,8 +11,9 @@ $mainColor : #ff6060;
         margin-left: 70px;
         font-size: larger;
 
-        &:hover {
-            text-decoration: underline;
-        }
+    }
+
+    .kasa-nav-liens a.active {
+        text-decoration: underline;
     }
 }

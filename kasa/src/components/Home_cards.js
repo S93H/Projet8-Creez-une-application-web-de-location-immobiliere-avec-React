@@ -1,39 +1,18 @@
 import React from 'react';
 import Card from './Cards';
+import { Link } from 'react-router-dom';
+import cardsData from './data.json';
 
 function Home_cards() {
-
-    const cardsData = [
-        {
-            id: 1,
-            title: "Titre de la location"
-        },
-        {
-            id: 2,
-            title: "Titre de la location"
-        },
-        {
-            id: 3,
-            title: "Titre de la location"
-        },
-        {
-            id: 4,
-            title: "Titre de la location"
-        },
-        {
-            id: 5,
-            title: "Titre de la location"
-        },
-        {
-            id: 6,
-            title: "Titre de la location"
-        },
-    ];
 
     return (
         <div className="Cards_container">
             {cardsData.map((card) => (
-                <Card key={card.id} title={card.title} />
+                <Link to={`/Housing/${card.id}`} className='card-link' key={card.id}>
+                <div className="card" style={{ backgroundImage: `url(${card.cover})` }}>
+                  <h2>{card.title}</h2>
+                </div>
+              </Link>
             ))}
         </div>
     );

@@ -1,0 +1,90 @@
+.aboutBanner {
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        border-radius: 20px;
+        background-image: url(../assets/banniere2.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        filter: brightness(.8);
+        z-index: -1;
+    }
+}
+
+.about-main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.AboutSection {
+    width: 70%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    margin: 20px 100px 0 100px;
+    position: relative;
+    overflow: hidden;
+    transition: height 0.3s ease-in-out;
+
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #ff6060;
+        border-radius: 5px;
+        padding: 10px;
+        font-size: x-large;
+
+        & p {
+            margin: 0;
+        }
+    }
+
+
+    .content {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-in-out;
+        /* Ajoutez cette ligne pour la transition */
+        background-color: #f6f6f6;
+        color: #ff6060;
+        border-radius: 5px;
+        padding-left: 20px;
+        
+    }
+
+    .content.open {
+        max-height: 500px;
+        /* Ajustez la hauteur maximale en fonction de vos besoins */
+    }
+
+    & h2 {
+        margin: 0;
+    }
+
+    & img {
+        height: 30px;
+        width: 30px;
+    }
+
+    .rotate {
+        transform: rotate(-180deg);
+        transition: .5s;
+    }
+
+    .arrow {
+        transition: transform .3s linear;
+        cursor: pointer;
+    }
+
+}
+

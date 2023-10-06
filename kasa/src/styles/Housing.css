@@ -1,0 +1,149 @@
+.SlideShow {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 70px 100px 30px 100px;
+}
+.SlideShow .Slide {
+  height: 416px;
+  width: 100%;
+  border-radius: 20px;
+}
+.SlideShow .SlideNumber {
+  position: absolute;
+  font-size: large;
+  font-weight: bold;
+  top: 84%;
+  left: 49%;
+  color: white;
+}
+.SlideShow .arrowRight {
+  position: absolute;
+  height: 100px;
+  top: 45%;
+  right: 5%;
+}
+.SlideShow .arrowLeft {
+  position: absolute;
+  height: 100px;
+  top: 45%;
+  left: 5%;
+}
+
+.Descriptif {
+  color: #ff6060;
+}
+.Descriptif .block {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 100px 30px 100px;
+}
+.Descriptif .block .part1 h2 {
+  font-size: 35px;
+  font-weight: 400;
+  margin: 0;
+}
+.Descriptif .block .part1 p {
+  margin-top: 5px;
+  font-size: large;
+}
+.Descriptif .block .part1 .tags {
+  display: flex;
+}
+.Descriptif .block .part1 .tags .tag {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  background-color: #ff6060;
+  color: white;
+  margin-right: 10px;
+  padding: 5px 20px 5px 20px;
+  width: auto;
+  font-size: 15px;
+}
+.Descriptif .block .part2 {
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+}
+.Descriptif .block .part2 .name {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  font-size: large;
+}
+.Descriptif .block .part2 .name p {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100px;
+}
+.Descriptif .block .part2 .name .circle img {
+  background-color: #c4c4c4;
+  border-radius: 50%;
+  height: 80px;
+  width: 80px;
+  margin-left: 10px;
+}
+.Descriptif .box {
+  color: white;
+  width: 45%;
+  margin-bottom: 50px;
+  position: relative;
+  overflow: hidden;
+  transition: height 0.3s ease-in-out;
+}
+.Descriptif .box .header {
+  background-color: #ff6060;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 10px;
+  padding: 10px;
+  font-size: x-large;
+}
+.Descriptif .box .arrow {
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+.Descriptif .box .arrow.rotate {
+  transform: rotate(-180deg);
+  transition: transform 0.3s ease;
+}
+.Descriptif .box p {
+  margin: 0;
+  font-size: large;
+}
+.Descriptif .box .content {
+  max-height: 500px;
+  min-height: 150px;
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out;
+  /* Ajoutez cette ligne pour la transition */
+  background-color: #f6f6f6;
+  color: #ff6060;
+  border-radius: 0 0 10px 10px;
+  padding: 20px;
+}
+.Descriptif .box .content ul {
+  margin: 0;
+}
+.Descriptif .box .content ul li {
+  list-style: none;
+  font-size: large;
+  margin-bottom: 5px;
+}
+.Descriptif .box .content.open {
+  max-height: 500px;
+  min-height: 150px;
+  transition: max-height 0.3s ease-in-out;
+  border-radius: 5px;
+  /* Ajustez la hauteur maximale en fonction de vos besoins */
+}
+.Descriptif .description_equipements {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 100px 30px 100px;
+}/*# sourceMappingURL=Housing.css.map */
