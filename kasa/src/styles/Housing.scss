@@ -153,7 +153,7 @@
             /* Ajoutez cette ligne pour la transition */
             background-color: #f6f6f6;
             color: #ff6060;
-            border-radius:  0 0 10px 10px;
+            border-radius: 0 0 10px 10px;
             padding: 20px;
 
             & ul {
@@ -165,9 +165,9 @@
                     margin-bottom: 5px;
                 }
             }
-            
+
         }
-    
+
         .content.open {
             max-height: 500px;
             min-height: 150px;
@@ -188,4 +188,93 @@
 
     }
 
+}
+
+//-------------------- Responsive --------------------------------//
+
+@media (max-width: 1650px) {
+    .SlideShow {
+        .arrowRight {
+            right: 7%;
+        }
+
+        .arrowLeft {
+            left: 7%;
+        }
+    }
+}
+
+@media (max-width: 1250px) {
+    .SlideShow {
+        .arrowRight {
+            right: 8%;
+        }
+
+        .arrowLeft {
+            left: 8%;
+        }
+    }
+}
+
+@media (max-width: 1020px) {
+    .SlideShow {
+        .arrowRight {
+            right: 10%;
+        }
+
+        .arrowLeft {
+            left: 10%;
+        }
+    }
+
+    .Descriptif {
+        .block {
+            .part1 {
+                margin-right: 50px;
+
+                & h2 {
+                    max-width: 550px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 820px) {
+    .SlideShow {
+        .arrowRight {
+            right: 13%;
+        }
+
+        .arrowLeft {
+            left: 13%;
+        }
+    }
+}
+
+@media (max-width: 767.98px) {
+    .SlideShow {
+        padding: 30px 50px 10px 50px;
+
+        .arrowRight {
+            right: 7%;
+        }
+
+        .arrowLeft {
+            left: 7%;
+        }
+    }
+
+    .Descriptif {
+        .block {
+            padding: 30px 50px 10px 50px;
+            .part1 {
+                margin-right: 50px;
+
+                & h2 {
+                    font-size: x-large;
+                }
+            }
+        }
+    }
 }

@@ -6,7 +6,7 @@ import '../styles/Housing.css';
 import Star1 from '../assets/star-active 3.png';
 import Star2 from '../assets/star-inactive 1.png';
 import arrow from '../assets/arrow.png';
-import cardsData from './data.json'; // Importez votre fichier JSON ici
+import cardsData from './data.json'; 
 import { useParams, useNavigate } from 'react-router-dom';
 
 function Box({ title, content }) {
@@ -59,7 +59,7 @@ function Housing() {
     const [selectedCard, setSelectedCard] = useState(null);
 
     useEffect(() => {
-        // Utilisez `cardsData` pour trouver la carte correspondante par ID
+      
         const card = cardsData.find((card) => card.id === id);
 
         if (card) {
@@ -69,7 +69,7 @@ function Housing() {
         }
     }, [id, navigate]);
 
-    // Ajoutez ce code pour afficher les équipements dans la console
+   
     useEffect(() => {
         if (selectedCard && selectedCard.equipments) {
             console.log("Equipements:", selectedCard.equipments);
@@ -89,7 +89,7 @@ function Housing() {
         return stars;
     };
 
-    const defaultRating = 3; // Vous pouvez définir la valeur du rating par défaut ici
+    const defaultRating = 3; 
     const rating = selectedCard ? selectedCard.rating : defaultRating;
 
 

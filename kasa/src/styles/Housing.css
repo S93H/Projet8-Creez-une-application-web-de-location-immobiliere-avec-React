@@ -146,4 +146,63 @@
   display: flex;
   justify-content: space-between;
   padding: 0 100px 30px 100px;
+}
+
+@media (max-width: 1650px) {
+  .SlideShow .arrowRight {
+    right: 7%;
+  }
+  .SlideShow .arrowLeft {
+    left: 7%;
+  }
+}
+@media (max-width: 1250px) {
+  .SlideShow .arrowRight {
+    right: 8%;
+  }
+  .SlideShow .arrowLeft {
+    left: 8%;
+  }
+}
+@media (max-width: 1020px) {
+  .SlideShow .arrowRight {
+    right: 10%;
+  }
+  .SlideShow .arrowLeft {
+    left: 10%;
+  }
+  .Descriptif .block .part1 {
+    margin-right: 50px;
+  }
+  .Descriptif .block .part1 h2 {
+    max-width: 550px;
+  }
+}
+@media (max-width: 820px) {
+  .SlideShow .arrowRight {
+    right: 13%;
+  }
+  .SlideShow .arrowLeft {
+    left: 13%;
+  }
+}
+@media (max-width: 767.98px) {
+  .SlideShow {
+    padding: 30px 50px 10px 50px;
+  }
+  .SlideShow .arrowRight {
+    right: 7%;
+  }
+  .SlideShow .arrowLeft {
+    left: 7%;
+  }
+  .Descriptif .block {
+    padding: 30px 50px 10px 50px;
+  }
+  .Descriptif .block .part1 {
+    margin-right: 50px;
+  }
+  .Descriptif .block .part1 h2 {
+    font-size: x-large;
+  }
 }/*# sourceMappingURL=Housing.css.map */

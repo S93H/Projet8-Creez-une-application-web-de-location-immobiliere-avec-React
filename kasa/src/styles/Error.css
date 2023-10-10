@@ -9,8 +9,40 @@
 .Error_main h2 {
   font-size: 40px;
   margin: 50px;
+  text-align: center;
 }
 .Error_main a {
   color: #ff6060;
   margin: 50px;
+}
+
+@media screen and (max-width: 858px) {
+  .Error_main img {
+    height: 200px;
+  }
+  .Error_main h2 {
+    font-size: 30px;
+  }
+}
+@media (max-width: 767.98px) {
+  .Error_main img {
+    height: 150px;
+  }
+  .Error_main h2 {
+    font-size: 20px;
+  }
+}
+@media (max-width: 457px) {
+  .Error_main img {
+    height: 100px;
+  }
+  .Error_main h2 {
+    font-size: 15px;
+    margin: 20px;
+  }
+  .Error_main a {
+    font-size: small;
+    margin: 20px;
+    text-align: center;
+  }
 }/*# sourceMappingURL=Error.css.map */

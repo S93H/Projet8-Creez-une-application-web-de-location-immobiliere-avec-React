@@ -59,7 +59,7 @@
         color: #ff6060;
         border-radius: 5px;
         padding-left: 20px;
-        
+
     }
 
     .content.open {
@@ -88,3 +88,29 @@
 
 }
 
+@media (max-width: 767.98px) {
+    .about-main {
+        width: 100%;
+        
+
+        .AboutSection {
+            width: 83%;
+            .header {
+                font-size: large;
+                height: 30px;
+            }
+        }
+    }
+
+}
+
+@media (max-width: 457px) {
+    .about-main .AboutSection {
+        .header p {
+            font-size: medium;
+        }
+        .content {
+           font-size: small;
+        }
+    }
+}

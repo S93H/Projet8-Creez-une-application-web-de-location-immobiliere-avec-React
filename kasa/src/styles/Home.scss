@@ -7,11 +7,11 @@
     display: flex;
     align-items: center;
     justify-content: center;
-   
+
 }
 
 .homeBanner {
-     &::before {
+    &::before {
         content: "";
         position: absolute;
         top: 0;
@@ -71,3 +71,124 @@
         }
     }
 }
+
+//---------------------Responsive---------------------//
+
+/* Desktop devices */
+
+@media screen and (max-width: 1158px) {
+    .Cards_container .card-link {
+        width: 35%;
+    }
+}
+
+/* Medium devices (tablets, less/equal than 1024px) */
+
+@media screen and (max-width: 858px) {
+    .kasa-logo {
+        height: 58px;
+    }
+
+    .Bannière {
+        height: 150px;
+        font-size: 40px;
+    }
+
+    .Cards_container .card {
+        height: 350px;
+    }
+}
+
+
+
+/* Small devices (phones, less than 768px) */
+@media (max-width: 767.98px) {
+    .kasa-nav {
+        padding: 30px 50px 10px 50px;
+        text-transform: uppercase;
+    }
+
+    .Bannière {
+        margin: 30px 50px 10px 50px;
+    }
+
+    .Cards_container {
+        background-color: white;
+        margin: 30px 50px 10px 50px;
+
+        .card-link {
+            width: 100%;
+            margin: 0;
+
+            .card {
+                margin: 30px 0 30px 0
+            }
+        }
+    }
+
+}
+
+@media (max-width: 660px) {
+    .kasa-logo {
+        height: 45px;
+    }
+
+    .kasa-nav {
+        .kasa-nav-liens a {
+            font-size: medium;
+            margin-left: 35px;
+        }
+    }
+
+    .Bannière {
+        font-size: 30px;
+    }
+
+}
+
+@media (max-width: 457px) {
+    .kasa-nav {
+        padding: 20px 30px 10px 30px;
+
+        .kasa-logo {
+            height: 30px;
+        }
+
+        .kasa-nav-liens a {
+            margin-left: 25px;
+            font-size: small;
+        }
+    }
+
+    .Bannière {
+        height: 100px;
+        font-size: medium;
+        margin: 20px 30px 10px 30px;
+    }
+
+    .Cards_container {
+        margin: 20px 30px 10px 30px;
+        .card-link {
+            .card {
+            height: 300px;
+            margin: 10px 0 10px 0
+
+        }
+
+        & h2 {
+            font-size: medium;
+        }
+        }
+        
+
+    }
+
+    .footer {
+        font-size: small;
+
+        & img {
+            height: 30px;
+        }
+    }
+}
+
