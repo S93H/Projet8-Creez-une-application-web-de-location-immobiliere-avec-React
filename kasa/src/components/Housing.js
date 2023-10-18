@@ -6,50 +6,51 @@ import '../styles/Housing.css';
 import Star1 from '../assets/star-active 3.png';
 import Star2 from '../assets/star-inactive 1.png';
 import arrow from '../assets/arrow.png';
-import cardsData from './data.json'; 
+import cardsData from './data.json';
 import { useParams, useNavigate } from 'react-router-dom';
+import Collapse from './collapse';
 
-function Box({ title, content }) {
-    const [isContentVisible, setIsContentVisible] = useState(false);
-    const [isArrowRotated, setIsArrowRotated] = useState(false);
+// function Box({ title, content }) {
+//     const [isContentVisible, setIsContentVisible] = useState(false);
+//     const [isArrowRotated, setIsArrowRotated] = useState(false);
 
-    const toggleContent = () => {
-        setIsContentVisible(!isContentVisible);
-        setIsArrowRotated(!isArrowRotated);
-    };
+//     const toggleContent = () => {
+//         setIsContentVisible(!isContentVisible);
+//         setIsArrowRotated(!isArrowRotated);
+//     };
 
-    return (
-        <div className="box">
-            <div className='header'>
-                <p>{title}</p>
-                <div className={`arrow ${isArrowRotated ? 'rotate' : ''}`} onClick={toggleContent}>
-                    <img src={arrow} alt="flèche" />
-                </div>
-            </div>
+//     return (
+//         <div className="box">
+//             <div className='header'>
+//                 <p>{title}</p>
+//                 <div className={`arrow ${isArrowRotated ? 'rotate' : ''}`} onClick={toggleContent}>
+//                     <img src={arrow} alt="flèche" />
+//                 </div>
+//             </div>
 
-            {isContentVisible && (
-                <div className="content">
-                    {title === 'Description' ? (
-                        <p>{content}</p>
-                    ) : (
-                        <div>
-                            {Array.isArray(content) ? (
-                                <ul>
-                                    {content.map((item, index) => (
-                                        <li key={index}>{item}</li>
-                                    ))}
-                                </ul>
-                            ) : (
-                                <div>{content}</div>
-                            )}
-                        </div>
-                    )}
-                </div>
-            )}
+//             {isContentVisible && (
+//                 <div className="content">
+//                     {title === 'Description' ? (
+//                         <p>{content}</p>
+//                     ) : (
+//                         <div>
+//                             {Array.isArray(content) ? (
+//                                 <ul>
+//                                     {content.map((item, index) => (
+//                                         <li key={index}>{item}</li>
+//                                     ))}
+//                                 </ul>
+//                             ) : (
+//                                 <div>{content}</div>
+//                             )}
+//                         </div>
+//                     )}
+//                 </div>
+//             )}
 
-        </div>
-    );
-}
+//         </div>
+//     );
+// }
 
 function Housing() {
     const { id } = useParams();
@@ -59,7 +60,7 @@ function Housing() {
     const [selectedCard, setSelectedCard] = useState(null);
 
     useEffect(() => {
-      
+
         const card = cardsData.find((card) => card.id === id);
 
         if (card) {
@@ -69,7 +70,7 @@ function Housing() {
         }
     }, [id, navigate]);
 
-   
+
     useEffect(() => {
         if (selectedCard && selectedCard.equipments) {
             console.log("Equipements:", selectedCard.equipments);
@@ -89,7 +90,7 @@ function Housing() {
         return stars;
     };
 
-    const defaultRating = 3; 
+    const defaultRating = 3;
     const rating = selectedCard ? selectedCard.rating : defaultRating;
 
 
@@ -116,14 +117,15 @@ function Housing() {
                     </div>
                 </div>
                 <div className='description_equipements'>
-                    <Box title="Description" content={selectedCard ? selectedCard.description : ''} />
+                    {/* <Box title="Description" content={selectedCard ? selectedCard.description : ''} />
                     <Box title="Équipements" content={<ul>
                         {selectedCard && selectedCard.equipments && selectedCard.equipments.map((equipment, index) => (
                             <li key={index}>{equipment}</li>
                         ))}
-                    </ul>} />
+                    </ul>} /> */}
 
-
+                    <Collapse title="Description" content={selectedCard ? selectedCard.description : ''} />
+                    <Collapse title="Équipements" content={selectedCard ? selectedCard.equipments : []} />
 
 
                 </div>

@@ -10,6 +10,7 @@
         height: 416px;
         width: 100%;
         border-radius: 20px;
+        object-fit: cover;
 
     }
 
@@ -27,6 +28,7 @@
         height: 100px;
         top: 45%;
         right: 5%;
+        cursor: pointer;
     }
 
     .arrowLeft {
@@ -34,6 +36,7 @@
         height: 100px;
         top: 45%;
         left: 5%;
+        cursor: pointer;
     }
 
 
@@ -109,7 +112,17 @@
         }
     }
 
-    .box {
+
+
+    .description_equipements {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 100px 30px 100px;
+
+
+    }
+
+    .collapse {
         color: white;
         width: 45%;
         margin-bottom: 50px;
@@ -146,48 +159,50 @@
         }
 
         .content {
-            max-height: 500px;
-            min-height: 150px;
+            // max-height: 0;
             overflow: hidden;
-            transition: max-height 0.3s ease-in-out;
-            /* Ajoutez cette ligne pour la transition */
+            transition: all 0.3s ease-in-out;
             background-color: #f6f6f6;
             color: #ff6060;
-            border-radius: 0 0 10px 10px;
-            padding: 20px;
+            border-radius: 5px;
+            padding: 0 0 0 20px;
+
+            & p {
+                padding: 10px 20px 10px 0;
+                line-height: 30px;
+            }
+
 
             & ul {
                 margin: 0;
+                padding: 10px 0 10px 0;
 
                 & li {
                     list-style: none;
                     font-size: large;
                     margin-bottom: 5px;
+
                 }
             }
 
         }
 
         .content.open {
-            max-height: 500px;
-            min-height: 150px;
-            transition: max-height 0.3s ease-in-out;
-            border-radius: 5px;
-            /* Ajustez la hauteur maximale en fonction de vos besoins */
+
+            // transition: all 0.3s ease-in-out;
+            // border-radius: 5px;
+            // max-height: 500px;
+            // min-height: 200px;
+            padding: 20px;
         }
 
 
 
     }
+}
 
-    .description_equipements {
-        display: flex;
-        justify-content: space-between;
-        padding: 0 100px 30px 100px;
-
-
-    }
-
+.Descriptif .description_equipements .collapse {
+    margin: 0;
 }
 
 //-------------------- Responsive --------------------------------//
@@ -263,11 +278,41 @@
         .arrowLeft {
             left: 7%;
         }
+
+
     }
+    
+
+    .Descriptif {
+        .block {
+            flex-direction: column;
+
+            .part2 {
+                flex-direction: row-reverse;
+                justify-content: space-between;
+                align-items: center;
+            }
+        }
+
+        .description_equipements {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 30px 50px 10px 50px;
+
+            .collapse {
+                width: 100%;
+                margin-bottom: 30px;
+            }
+
+        }
+    }
+
 
     .Descriptif {
         .block {
             padding: 30px 50px 10px 50px;
+
             .part1 {
                 margin-right: 50px;
 
@@ -276,5 +321,164 @@
                 }
             }
         }
+    }
+}
+
+@media (max-width: 593px) {
+    .Descriptif {
+        .block{
+            .part1 {
+                margin-bottom: 30px;
+
+                & h2 {
+                    font-size: large;
+                }
+
+                & p {
+                    font-size: smaller;
+                }
+
+                .tags {
+                    .tag {
+                        font-size: x-small;
+                        padding: 5px 10px 5px 10px;
+                    }
+                }
+            }
+
+            .part2 {
+                .name {
+                    font-size: medium;
+                    .circle img{
+                    height: 60px;
+                    width: 60px;
+                }
+                }
+
+                .rating img{
+                    height: 30px;
+                }
+                
+            }
+        }
+
+        .description_equipements .collapse {
+             .header {
+                font-size: medium;
+                padding: 5px;
+            & p {
+                font-size: medium;
+            }
+            .arrow img{
+                height: 20px;
+                width: 20px;
+            }
+        }
+            .content.open {
+                & p {
+                    font-size: medium;
+                }
+
+                & ul {
+                    & li {
+                        font-size: medium;
+                    }
+                }
+            }
+        }
+        
+       
+    }
+}
+
+@media (max-width: 435px) {
+    .SlideShow {
+        height: 300px;
+
+        .SlideNumber {
+            font-size: small;
+        }
+
+        .arrowRight {
+            right: 13%;
+            height: 50px;
+        }
+
+        .arrowLeft {
+            height: 50px;
+            left: 13%;
+        }
+
+
+    }
+
+    .Descriptif {
+        .block {
+            padding: 20px 50px 10px 50px;
+
+            .part1 {
+                margin-right: 0;
+                & h2 {
+                    font-size: medium;
+                }
+                & p {
+                    font-size: small;
+                }
+
+                .tags {
+                    .tag {
+                        font-size: xx-small;
+                        padding: 1px 5px 1px 5px;
+                    }
+                }
+            }
+            .part2 {
+                .name {
+                    & p {
+                        font-size: x-small;
+                        width: 70px;
+                    }
+
+                    .circle img {
+                        height: 50px;
+                        width: 50px;
+                        margin-left: 0;
+                    }
+
+                    
+                }
+                .rating img {
+                        height: 20px;
+                    }
+            }
+
+            
+        }
+
+        .description_equipements .collapse{
+                .header {
+                    & p {
+                        font-size: small;
+                    }
+
+                    .arrow img {
+                        height: 15px;
+                        width: 15px;
+                    }
+                }
+
+                .content.open {
+                    min-height: 100px;
+                    & p {
+                        font-size: x-small;
+                        line-height: 15px;
+                    }
+
+                    & ul li {
+                        font-size: x-small;
+                    }
+                    
+                }
+            }
     }
 }

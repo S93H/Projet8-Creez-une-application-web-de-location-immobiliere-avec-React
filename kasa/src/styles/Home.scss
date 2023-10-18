@@ -23,6 +23,7 @@
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
+        object-fit: cover;
         filter: brightness(.8);
         z-index: -1;
     }
@@ -59,6 +60,9 @@
         margin: 50px 0 50px 0;
         display: flex;
         align-items: flex-end;
+        position: relative;
+        overflow: hidden;
+        
 
 
         & h2 {
@@ -67,9 +71,21 @@
             margin: 0;
             font-weight: normal;
             font-size: larger;
-
+            z-index: 1;
         }
     }
+
+    .card-overlay {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        // background: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+        background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+        pointer-events: none; /* Avec ça j'évite de bloquer les interactions utilisateur */
+        z-index: 0;
+      }
 }
 
 //---------------------Responsive---------------------//
@@ -168,18 +184,18 @@
 
     .Cards_container {
         margin: 20px 30px 10px 30px;
+
         .card-link {
             .card {
-            height: 300px;
-            margin: 10px 0 10px 0
+                height: 300px;
+                margin: 10px 0 10px 0
+            }
 
+            & h2 {
+                font-size: medium;
+            }
         }
 
-        & h2 {
-            font-size: medium;
-        }
-        }
-        
 
     }
 
@@ -191,4 +207,3 @@
         }
     }
 }
-

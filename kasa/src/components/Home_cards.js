@@ -10,6 +10,7 @@ function Home_cards() {
             {cardsData.map((card) => (
                 <Link to={`/Housing/${card.id}`} className='card-link' key={card.id}>
                 <div className="card" style={{ backgroundImage: `url(${card.cover})` }}>
+                  <div className="card-overlay"></div>
                   <h2>{card.title}</h2>
                 </div>
               </Link>

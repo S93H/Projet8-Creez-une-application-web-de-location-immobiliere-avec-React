@@ -10,6 +10,8 @@
   height: 416px;
   width: 100%;
   border-radius: 20px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .SlideShow .SlideNumber {
   position: absolute;
@@ -24,12 +26,14 @@
   height: 100px;
   top: 45%;
   right: 5%;
+  cursor: pointer;
 }
 .SlideShow .arrowLeft {
   position: absolute;
   height: 100px;
   top: 45%;
   left: 5%;
+  cursor: pointer;
 }
 
 .Descriptif {
@@ -87,7 +91,12 @@
   width: 80px;
   margin-left: 10px;
 }
-.Descriptif .box {
+.Descriptif .description_equipements {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 100px 30px 100px;
+}
+.Descriptif .collapse {
   color: white;
   width: 45%;
   margin-bottom: 50px;
@@ -95,7 +104,7 @@
   overflow: hidden;
   transition: height 0.3s ease-in-out;
 }
-.Descriptif .box .header {
+.Descriptif .collapse .header {
   background-color: #ff6060;
   display: flex;
   justify-content: space-between;
@@ -104,48 +113,45 @@
   padding: 10px;
   font-size: x-large;
 }
-.Descriptif .box .arrow {
+.Descriptif .collapse .arrow {
   transition: transform 0.3s ease;
   cursor: pointer;
 }
-.Descriptif .box .arrow.rotate {
+.Descriptif .collapse .arrow.rotate {
   transform: rotate(-180deg);
   transition: transform 0.3s ease;
 }
-.Descriptif .box p {
+.Descriptif .collapse p {
   margin: 0;
   font-size: large;
 }
-.Descriptif .box .content {
-  max-height: 500px;
-  min-height: 150px;
+.Descriptif .collapse .content {
   overflow: hidden;
-  transition: max-height 0.3s ease-in-out;
-  /* Ajoutez cette ligne pour la transition */
+  transition: all 0.3s ease-in-out;
   background-color: #f6f6f6;
   color: #ff6060;
-  border-radius: 0 0 10px 10px;
-  padding: 20px;
+  border-radius: 5px;
+  padding: 0 0 0 20px;
 }
-.Descriptif .box .content ul {
+.Descriptif .collapse .content p {
+  padding: 10px 20px 10px 0;
+  line-height: 30px;
+}
+.Descriptif .collapse .content ul {
   margin: 0;
+  padding: 10px 0 10px 0;
 }
-.Descriptif .box .content ul li {
+.Descriptif .collapse .content ul li {
   list-style: none;
   font-size: large;
   margin-bottom: 5px;
 }
-.Descriptif .box .content.open {
-  max-height: 500px;
-  min-height: 150px;
-  transition: max-height 0.3s ease-in-out;
-  border-radius: 5px;
-  /* Ajustez la hauteur maximale en fonction de vos besoins */
+.Descriptif .collapse .content.open {
+  padding: 20px;
 }
-.Descriptif .description_equipements {
-  display: flex;
-  justify-content: space-between;
-  padding: 0 100px 30px 100px;
+
+.Descriptif .description_equipements .collapse {
+  margin: 0;
 }
 
 @media (max-width: 1650px) {
@@ -197,6 +203,24 @@
     left: 7%;
   }
   .Descriptif .block {
+    flex-direction: column;
+  }
+  .Descriptif .block .part2 {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .Descriptif .description_equipements {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 50px 10px 50px;
+  }
+  .Descriptif .description_equipements .collapse {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  .Descriptif .block {
     padding: 30px 50px 10px 50px;
   }
   .Descriptif .block .part1 {
@@ -204,5 +228,108 @@
   }
   .Descriptif .block .part1 h2 {
     font-size: x-large;
+  }
+}
+@media (max-width: 593px) {
+  .Descriptif .block .part1 {
+    margin-bottom: 30px;
+  }
+  .Descriptif .block .part1 h2 {
+    font-size: large;
+  }
+  .Descriptif .block .part1 p {
+    font-size: smaller;
+  }
+  .Descriptif .block .part1 .tags .tag {
+    font-size: x-small;
+    padding: 5px 10px 5px 10px;
+  }
+  .Descriptif .block .part2 .name {
+    font-size: medium;
+  }
+  .Descriptif .block .part2 .name .circle img {
+    height: 60px;
+    width: 60px;
+  }
+  .Descriptif .block .part2 .rating img {
+    height: 30px;
+  }
+  .Descriptif .description_equipements .collapse .header {
+    font-size: medium;
+    padding: 5px;
+  }
+  .Descriptif .description_equipements .collapse .header p {
+    font-size: medium;
+  }
+  .Descriptif .description_equipements .collapse .header .arrow img {
+    height: 20px;
+    width: 20px;
+  }
+  .Descriptif .description_equipements .collapse .content.open p {
+    font-size: medium;
+  }
+  .Descriptif .description_equipements .collapse .content.open ul li {
+    font-size: medium;
+  }
+}
+@media (max-width: 435px) {
+  .SlideShow {
+    height: 300px;
+  }
+  .SlideShow .SlideNumber {
+    font-size: small;
+  }
+  .SlideShow .arrowRight {
+    right: 13%;
+    height: 50px;
+  }
+  .SlideShow .arrowLeft {
+    height: 50px;
+    left: 13%;
+  }
+  .Descriptif .block {
+    padding: 20px 50px 10px 50px;
+  }
+  .Descriptif .block .part1 {
+    margin-right: 0;
+  }
+  .Descriptif .block .part1 h2 {
+    font-size: medium;
+  }
+  .Descriptif .block .part1 p {
+    font-size: small;
+  }
+  .Descriptif .block .part1 .tags .tag {
+    font-size: xx-small;
+    padding: 1px 5px 1px 5px;
+  }
+  .Descriptif .block .part2 .name p {
+    font-size: x-small;
+    width: 70px;
+  }
+  .Descriptif .block .part2 .name .circle img {
+    height: 50px;
+    width: 50px;
+    margin-left: 0;
+  }
+  .Descriptif .block .part2 .rating img {
+    height: 20px;
+  }
+  .Descriptif .description_equipements .collapse .header p {
+    font-size: small;
+  }
+  .Descriptif .description_equipements .collapse .header .arrow img {
+    height: 15px;
+    width: 15px;
+  }
+  .Descriptif .description_equipements .collapse .content.open {
+    min-height: 100px;
+  }
+  .Descriptif .description_equipements .collapse .content.open p {
+    font-size: x-small;
+    line-height: 15px;
+  }
+  .Descriptif .description_equipements .collapse .content.open ul li {
+    font-size: x-small;
   }
 }/*# sourceMappingURL=Housing.css.map */

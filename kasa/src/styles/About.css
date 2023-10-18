@@ -10,6 +10,8 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   filter: brightness(0.8);
   z-index: -1;
 }
@@ -22,7 +24,7 @@
   align-items: center;
 }
 
-.AboutSection {
+.collapse {
   width: 70%;
   color: white;
   display: flex;
@@ -32,7 +34,7 @@
   overflow: hidden;
   transition: height 0.3s ease-in-out;
 }
-.AboutSection .header {
+.collapse .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -41,35 +43,33 @@
   padding: 10px;
   font-size: x-large;
 }
-.AboutSection .header p {
+.collapse .header p {
   margin: 0;
 }
-.AboutSection .content {
+.collapse .content {
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.3s ease-in-out;
-  /* Ajoutez cette ligne pour la transition */
   background-color: #f6f6f6;
   color: #ff6060;
   border-radius: 5px;
   padding-left: 20px;
 }
-.AboutSection .content.open {
+.collapse .content.open {
   max-height: 500px;
-  /* Ajustez la hauteur maximale en fonction de vos besoins */
 }
-.AboutSection h2 {
+.collapse h2 {
   margin: 0;
 }
-.AboutSection img {
+.collapse img {
   height: 30px;
   width: 30px;
 }
-.AboutSection .rotate {
+.collapse .rotate {
   transform: rotate(-180deg);
   transition: 0.5s;
 }
-.AboutSection .arrow {
+.collapse .arrow {
   transition: transform 0.3s linear;
   cursor: pointer;
 }
@@ -78,19 +78,48 @@
   .about-main {
     width: 100%;
   }
-  .about-main .AboutSection {
+  .about-main .collapse {
     width: 83%;
   }
-  .about-main .AboutSection .header {
-    font-size: large;
+  .about-main .collapse .header {
     height: 30px;
+  }
+  .about-main .collapse .header p {
+    font-size: large;
+  }
+  .about-main .collapse .header .arrow img {
+    height: 20px;
+    width: 20px;
+  }
+}
+@media (max-width: 550px) {
+  .about-main .collapse .header {
+    padding: 5px;
+  }
+  .about-main .collapse .header p {
+    font-size: medium;
+  }
+  .about-main .collapse .content {
+    font-size: small;
+  }
+  .about-main .collapse .content.open {
+    font-size: small;
   }
 }
 @media (max-width: 457px) {
-  .about-main .AboutSection .header p {
-    font-size: medium;
-  }
-  .about-main .AboutSection .content {
+  .about-main .collapse .header p {
     font-size: small;
+  }
+  .about-main .collapse .header .arrow img {
+    height: 15px;
+    width: 15px;
+  }
+  .about-main .collapse .content {
+    font-size: x-small;
+    padding-right: 5px;
+  }
+  .about-main .collapse .content.open {
+    font-size: x-small;
+    padding-right: 5px;
   }
 }/*# sourceMappingURL=About.css.map */

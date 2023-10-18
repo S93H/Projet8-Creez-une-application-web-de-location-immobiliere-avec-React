@@ -22,6 +22,8 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   filter: brightness(0.8);
   z-index: -1;
 }
@@ -55,6 +57,8 @@
   margin: 50px 0 50px 0;
   display: flex;
   align-items: flex-end;
+  position: relative;
+  overflow: hidden;
 }
 .Cards_container .card h2 {
   width: 150px;
@@ -62,6 +66,17 @@
   margin: 0;
   font-weight: normal;
   font-size: larger;
+  z-index: 1;
+}
+.Cards_container .card-overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+  pointer-events: none; /* Avec ça j'évite de bloquer les interactions utilisateur */
+  z-index: 0;
 }
 
 /* Desktop devices */

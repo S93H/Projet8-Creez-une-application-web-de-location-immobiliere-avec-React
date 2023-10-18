@@ -1,6 +1,7 @@
 import React from 'react';
 import '../styles/About.css';
-import AboutSection from './AboutSection';
+// import AboutSection from './AboutSection';
+import Collapse from './collapse';
 
 function About_main() {
 
@@ -27,7 +28,7 @@ function About_main() {
     return (
         <div className="about-main">
           {sections.map((section, index) => (
-            <AboutSection key={index} section={section} />
+            <Collapse key={index} title={section.title} content={section.content} />
           ))}
         </div>
       );
