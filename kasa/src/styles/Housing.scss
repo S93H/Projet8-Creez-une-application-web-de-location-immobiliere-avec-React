@@ -188,11 +188,6 @@
         }
 
         .content.open {
-
-            // transition: all 0.3s ease-in-out;
-            // border-radius: 5px;
-            // max-height: 500px;
-            // min-height: 200px;
             padding: 20px;
         }
 
@@ -374,6 +369,10 @@
                 width: 20px;
             }
         }
+
+        .content p {
+            font-size: medium;
+        }
             .content.open {
                 & p {
                     font-size: medium;
@@ -437,6 +436,7 @@
                     & p {
                         font-size: x-small;
                         width: 70px;
+                        margin-right: 5px;
                     }
 
                     .circle img {
@@ -465,6 +465,10 @@
                         height: 15px;
                         width: 15px;
                     }
+                }
+
+                .content p {
+                    font-size: x-small;
                 }
 
                 .content.open {

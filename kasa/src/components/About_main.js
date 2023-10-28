@@ -1,11 +1,13 @@
+// J'importe la bibliothèque React.
 import React from 'react';
+// J'importe les styles CSS spécifiques à la page "About".
 import '../styles/About.css';
-// import AboutSection from './AboutSection';
+// J'importe le composant "Collapse" nécessaire pour afficher des sections dépliables.
 import Collapse from './collapse';
 
 function About_main() {
 
-
+    // Définition des sections à afficher avec leur titre et contenu.
     const sections = [
         {
             title: 'Fiabilité',
@@ -28,6 +30,7 @@ function About_main() {
     return (
         <div className="about-main">
           {sections.map((section, index) => (
+            // Boucle sur les sections pour créer des composants "Collapse" avec le titre et le contenu de chaque section.
             <Collapse key={index} title={section.title} content={section.content} />
           ))}
         </div>

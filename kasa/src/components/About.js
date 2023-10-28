@@ -1,4 +1,6 @@
+// Importation de la bibliothèque React
 import React from 'react';
+// Importation des composants nécessaires
 import Nav from './Nav';
 import Banner from './Banner';
 import '../styles/About.css';

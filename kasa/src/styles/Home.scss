@@ -50,7 +50,6 @@
 
     .card {
         cursor: pointer;
-        // background-image: linear-gradient(to top, #a24747, #b94d4e, #d05454, #e75a5b, #ff6161);
         background-repeat: no-repeat;
         background-size: cover;
         color: white;
@@ -81,7 +80,6 @@
         right: 0;
         bottom: 0;
         left: 0;
-        // background: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
         background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
         pointer-events: none; /* Avec ça j'évite de bloquer les interactions utilisateur */
         z-index: 0;

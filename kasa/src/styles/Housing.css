@@ -265,6 +265,9 @@
     height: 20px;
     width: 20px;
   }
+  .Descriptif .description_equipements .collapse .content p {
+    font-size: medium;
+  }
   .Descriptif .description_equipements .collapse .content.open p {
     font-size: medium;
   }
@@ -306,6 +309,7 @@
   .Descriptif .block .part2 .name p {
     font-size: x-small;
     width: 70px;
+    margin-right: 5px;
   }
   .Descriptif .block .part2 .name .circle img {
     height: 50px;
@@ -321,6 +325,9 @@
   .Descriptif .description_equipements .collapse .header .arrow img {
     height: 15px;
     width: 15px;
+  }
+  .Descriptif .description_equipements .collapse .content p {
+    font-size: x-small;
   }
   .Descriptif .description_equipements .collapse .content.open {
     min-height: 100px;
