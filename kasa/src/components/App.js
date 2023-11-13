@@ -1,7 +1,7 @@
 // importation du fichier css.
 import '../App.css';
 
-// importation des composants nécessaires des React Router Dom.
+// importation des composants nécessaires de React Router Dom.
 import {Routes, Route} from "react-router-dom";
 
 // importation des composants spécifiques à chaque itinéraires.
@@ -21,7 +21,7 @@ function App() {
       <Route path="/About" element={<About />} />
       {/* Itinéraire pour la page "Housing" avec un paramètre "id" dans l'URL, ex. "/Housing/1" */}
       <Route path="/Housing/:id" element={<Housing />} />
-      {/* Itinéraire par défaut pour gérer les URL non correspondantes, affiche la page d'erreur */}
+      {/* Itinéraire par défaut pour gérer les URL non correspondantes, on affiche la page d'erreur */}
       <Route path="*" element={<Error />} />
     </Routes>
   );

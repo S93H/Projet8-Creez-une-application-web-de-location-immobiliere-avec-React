@@ -34,7 +34,7 @@ function Collapse({ title, content }) {
               ))}
             </ul>
           ) : (
-            // Si "content" n'est pas un tableau, affiche simplement le texte.
+            // Si "content" n'est pas un tableau, j'affiche simplement le texte.
             <p>{content}</p>
           )}
         </div>

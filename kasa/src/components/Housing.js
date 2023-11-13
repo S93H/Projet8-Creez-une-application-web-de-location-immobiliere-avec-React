@@ -23,11 +23,11 @@ function Housing() {
     useEffect(() => {
         // J'utilise find() pour recherche un carte spécifique dans cardsData
         const card = cardsData.find((card) => card.id === id);
-
+         // Si une carte correspondant à l'ID est trouvée dans cardsData , je défini cette carte comme la carte sélectionnée.
         if (card) {
             setSelectedCard(card);
         } else {
-            // Redirection vers la page d'erreur si la carte n'est pas trouvée.
+            // Sinon Redirection vers la page d'erreur si la carte n'est pas trouvée.
             navigate('/error');
         }
     }, [id, navigate]);
